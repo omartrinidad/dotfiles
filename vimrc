@@ -103,9 +103,14 @@ set wildignore+=*.pyc
 " LaTeX files
 set wildignore+=*.aux
 set wildignore+=*.bbl
-set wildignore+=*.cls
 set wildignore+=*.blg
+set wildignore+=*.brf
+set wildignore+=*.cls
 set wildignore+=*.bbl
+set wildignore+=*.toc
+set wildignore+=*.lof
+set wildignore+=*.lot
+set wildignore+=*.log
 set wildignore+=.git
 
 " reset wild
@@ -118,3 +123,9 @@ cmap Q q
 
 " Yank as C and D
 nnoremap Y y$
+
+" Size of text
+"set fo+=a
+
+" Word. Word instead of Word.  Word
+set nojoinspaces
