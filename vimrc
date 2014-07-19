@@ -129,3 +129,6 @@ nnoremap Y y$
 
 " Word. Word instead of Word.  Word
 set nojoinspaces
+
+"set pastetoggle
+set pastetoggle=<F3>
