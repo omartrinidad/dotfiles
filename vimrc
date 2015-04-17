@@ -8,7 +8,7 @@ set autoindent
 set tabstop=4 expandtab shiftwidth=4 softtabstop=4
 
 "searching
-set incsearch hlsearch
+set incsearch nohlsearch
 
 "nowrap
 set nowrap
@@ -17,15 +17,16 @@ set nowrap
 set foldmethod=indent
 set foldlevel=99
 
-"theme molokai
-"set t_Co=256
+"theme molokai, zenburn
+set t_Co=256
 "colorscheme molokai
+colorscheme zenburn
 
 "theme solarized
-set t_Co=16
-set background=dark
-let g:solarized_termcolors=16
-colorscheme solarized
+"set t_Co=16
+"set background=light
+"let g:solarized_termcolors=16
+"colorscheme solarized
 
 "change split
 map <c-j> <c-w>j
@@ -34,8 +35,8 @@ map <c-l> <c-w>l
 map <c-h> <c-w>h
 
 " Add extra space to the active window
-autocmd WinEnter * :wincmd = | 15wincmd >
-autocmd WinLeave * :15wincmd <
+"autocmd WinEnter * :wincmd = | 15wincmd >
+"autocmd WinLeave * :15wincmd <
 
 imap jj <Esc>
 
@@ -49,23 +50,35 @@ call vundle#rc()
 
 " Vundle plugins
 Bundle 'gmarik/vundle'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'altercation/vim-colors-solarized'
+Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-repeat'
 Bundle 'ap/vim-css-color'
+Bundle 'kien/ctrlp.vim'
+Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'mattn/emmet-vim'
 
 " Old powerline
 set laststatus=2
 set encoding=utf-8
-" instead of let g:Powerline_symbols = 'fancy'
-let g:Powerline_symbols = 'unicode'
+let g:airline_enable_branch     = 1
+
+" vim-powerline symbols
+let g:airline_left_sep          = '⮀'
+let g:airline_left_alt_sep      = '⮁'
+let g:airline_right_sep         = '⮂'
+let g:airline_right_alt_sep     = '⮃'
+let g:airline_branch_prefix     = '⭠'
+let g:airline_readonly_symbol   = '⭤'
+let g:airline_linecolumn_prefix = '⭡'
 
 " ColorColumn
 set colorcolumn=80
 "hi ColorColumn ctermbg=235 "molokai
-"187 with light solarized
+"hi ColorColumn ctermbg=187 " solarized light
 hi OverLength ctermfg=111
-match  OverLength /\%81v.\+/
+match OverLength /\%81v.\+/
 
 " In order to justify text
 " set textwidth=80
@@ -78,8 +91,8 @@ set splitright
 
 " horizontal line
 set cursorline
-" 235 molokai
 "hi CursorLine ctermbg=235 "molokai
+"hi CursorLine ctermbg=187 "solarized light
 
 " Bye key directions in normal, insert and visual mode
 nnoremap <up> <nop>
@@ -129,3 +142,23 @@ nnoremap Y y$
 
 " Word. Word instead of Word.  Word
 set nojoinspaces
+
+"Simple re-format for minified Javascript
+command! UnMinify call UnMinify()
+function! UnMinify()
+    %s/{\ze[^\r\n]/{\r/g
+    %s/){/) {/g
+    %s/};\?\ze[^\r\n]/\0\r/g
+    %s/;\ze[^\r\n]/;\r/g
+    %s/[^\s]\zs[=&|]\+\ze[^\s]/ \0 /g
+    normal ggVG=
+endfunction
+
+" set paste mode
+set pastetoggle=<F3>
+
+" work with tmux
+set term=screen-256color
+
+noremap <F12> <Esc>:syntax sync fromstart<CR>
+inoremap <F12> <C-o>:syntax sync fromstart<CR>
