@@ -45,7 +45,7 @@ set nobackup
 set noswapfile
 
 " Vundle
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
 
 " Vundle plugins
