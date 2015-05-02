@@ -4,7 +4,6 @@
 
 My public dotfiles.
 
-
 # Vim Configuration
 
 - Download the plugin `Vundle.vim`:

@@ -62,16 +62,15 @@ Bundle 'mattn/emmet-vim'
 " Old powerline
 set laststatus=2
 set encoding=utf-8
-let g:airline_enable_branch     = 1
 
-" vim-powerline symbols
-let g:airline_left_sep          = '⮀'
-let g:airline_left_alt_sep      = '⮁'
-let g:airline_right_sep         = '⮂'
-let g:airline_right_alt_sep     = '⮃'
-let g:airline_branch_prefix     = '⭠'
-let g:airline_readonly_symbol   = '⭤'
-let g:airline_linecolumn_prefix = '⭡'
+" vim airline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_branch_prefix = ''
+let g:airline_readonly_symbol = ''
+let g:airline_linecolumn_prefix = ''
 
 " ColorColumn
 set colorcolumn=80
@@ -137,22 +136,8 @@ cmap Q q
 " Yank as C and D
 nnoremap Y y$
 
-" Size of text
-"set fo+=a
-
 " Word. Word instead of Word.  Word
 set nojoinspaces
-
-"Simple re-format for minified Javascript
-command! UnMinify call UnMinify()
-function! UnMinify()
-    %s/{\ze[^\r\n]/{\r/g
-    %s/){/) {/g
-    %s/};\?\ze[^\r\n]/\0\r/g
-    %s/;\ze[^\r\n]/;\r/g
-    %s/[^\s]\zs[=&|]\+\ze[^\s]/ \0 /g
-    normal ggVG=
-endfunction
 
 " set paste mode
 set pastetoggle=<F3>
@@ -160,5 +145,6 @@ set pastetoggle=<F3>
 " work with tmux
 set term=screen-256color
 
+" repaint
 noremap <F12> <Esc>:syntax sync fromstart<CR>
 inoremap <F12> <C-o>:syntax sync fromstart<CR>
