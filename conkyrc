@@ -1,0 +1,47 @@
+conky.config = {
+
+    alignment = 'top_right',
+
+    cpu_avg_samples = 1,
+    net_avg_samples = 1,
+    update_interval = 2,
+
+    default_color = 'white',
+    default_outline_color = 'white',
+    default_shade_color = 'white',
+    color2 = 'gray50',
+
+    use_xft = true,
+    font = 'DejaVu Sans Mono:size=15',
+
+    draw_borders = false,
+    draw_shades = false,
+    draw_graph_borders = false,
+    draw_outline = false,
+
+    border_width = 0,
+
+    gap_x = 100,
+    gap_y = 200,
+
+    own_window = true,
+    own_window_type = 'normal',
+    own_window_transparent = true,
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    own_window_argb_visual = true,
+
+    use_spacer = 'left',
+    double_buffer = true,
+    no_buffers = false,
+
+    total_run_times = 0,
+    background = true,
+}
+
+conky.text = [[
+
+${color cyan}To Do List:
+
+${color white}${exec cat things.md}
+
+]]
