@@ -58,6 +58,7 @@ Bundle 'ap/vim-css-color'
 Bundle 'kien/ctrlp.vim'
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'mattn/emmet-vim'
+Bundle 'davidhalter/jedi-vim'
 
 " Old powerline
 set laststatus=2
@@ -148,3 +149,8 @@ set term=screen-256color
 " repaint
 noremap <F12> <Esc>:syntax sync fromstart<CR>
 inoremap <F12> <C-o>:syntax sync fromstart<CR>
+" replace
+noremap <F4> <Esc>:%s/\s\+$//g<CR>:w<CR>
+
+" ctags
+set tags=~/schiffsdiebe/.ctags
