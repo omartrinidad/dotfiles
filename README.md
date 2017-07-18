@@ -7,6 +7,7 @@ My public dotfiles.
 
 - Create symlink files to the content of this folder:
     + `ln -sf ~/dotfiles/vim/* ~/.vim/`
+    + `ln -sf ~/dotfiles/vim/colors/* ~/.vim/colors/`
     + `ln -sf ~/dotfiles/vimrc ~/.vimrc`
 
 - Download the plugin `Vundle.vim`:
