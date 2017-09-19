@@ -54,6 +54,7 @@ Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-obsession'
 Bundle 'ap/vim-css-color'
 Bundle 'kien/ctrlp.vim'
 Bundle 'christoomey/vim-tmux-navigator'
@@ -65,13 +66,17 @@ set laststatus=2
 set encoding=utf-8
 
 " vim airline symbols
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_branch_prefix = ''
-let g:airline_readonly_symbol = ''
-let g:airline_linecolumn_prefix = ''
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.branch = '⎇  '
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.whitespace = 'Ξ'
+
 
 " ColorColumn
 set colorcolumn=80
@@ -153,4 +158,5 @@ inoremap <F12> <C-o>:syntax sync fromstart<CR>
 noremap <F4> <Esc>:%s/\s\+$//g<CR>:w<CR>
 
 " ctags
-set tags=~/schiffsdiebe/.ctags
+" set tags=~/schiffsdiebe/.ctags
+" autocmd Filetype tex source ~/.vim/auctex.vim
