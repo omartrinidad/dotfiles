@@ -18,15 +18,15 @@ set foldmethod=indent
 set foldlevel=99
 
 "theme molokai, zenburn
-"set t_Co=256
+set t_Co=256
 "colorscheme molokai
-"colorscheme zenburn
+colorscheme zenburn
 
 "theme solarized
-set t_Co=16
-set background=dark
-let g:solarized_termcolors=16
-colorscheme solarized
+"set t_Co=16
+"set background=light
+"let g:solarized_termcolors=16
+"colorscheme solarized
 
 "change split
 map <c-j> <c-w>j
