@@ -42,6 +42,6 @@ conky.text = [[
 
 ${color cyan}To Do List:
 
-${color white}${exec cat things.md}
+${color white}${exec cat ~/things.md}
 
 ]]
