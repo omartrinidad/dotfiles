@@ -1,6 +1,3 @@
-sudo apt install pip
-sudo pip install virtualenvwrapper
-
 mkdir ~/.envs
 echo '' >> ~/.bashrc 
 echo '# virtualenvwrapper' >> ~/.bashrc 

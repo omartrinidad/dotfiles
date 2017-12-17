@@ -3,42 +3,5 @@
 
 My public dotfiles.
 
-## Vim
-
-- Create symlink files to the content of this folder:
-
-        ln -sf ~/dotfiles/vim/* ~/.vim/
-        ln -sf ~/dotfiles/vim/colors/* ~/.vim/colors/
-        ln -sf ~/dotfiles/vimrc ~/.vimrc
-
-- Download the plugin `Vundle.vim`:
-    + `git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
-    + Open Vim and run `:PluginInstall`
-
-- Download the fonts:
-    + `git clone https://github.com/powerline/fonts`
-    + `./install`
-
-## Bash
-
-- Append configurations to the bashrc file:
-    + `cat ~/dotfiles/bashrc >> ~/.bashrc`
-
-## Tmux
-
-- Create symlink file to the tmux configuration file:
-    + `ln -sf ~/dotfiles/tmux.conf ~/.tmux.conf`
-
-- Install `tmux-resurrect`:
-    + `git clone https://github.com/tmux-plugins/tmux-resurrect ~/.tmux/tmux-resurrect`
-- Reload Tmux:
-    + `tmux source-file ~/.tmux.conf`
-
-## Jupyter
-
-- Install `jupyter-vim-binding` plugin. See `scripts/configure.sh`.
-
-## Conky
-
-- Create symlink file to the conky configuration file:
-    + `ln -sf ~/dotfiles/conkyrc ~/.conkyrc`
+Here I save my configurations for Vim, Bash, Tmux, Jupyter and Conky. See
+`scripts/configure.sh`.
