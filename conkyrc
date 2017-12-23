@@ -44,4 +44,18 @@ ${color cyan}To Do List:
 
 ${color white}${exec cat ~/things.md}
 
+${color blue}RAM
+${color green}${top_mem name 1}${alignr}${top_mem mem 1}%
+${color green}${top_mem name 2}${alignr}${top_mem mem 2}%
+${color green}${top_mem name 3}${alignr}${top_mem mem 3}%
+${color green}${top_mem name 4}${alignr}${top_mem mem 4}%
+${color green}${top_mem name 5}${alignr}${top_mem mem 5}%
+
+${color blue}CPU
+${color yellow}${top name 1}${alignr}${top cpu 1}%
+${color yellow}${top name 2}${alignr}${top cpu 2}%
+${color yellow}${top name 3}${alignr}${top cpu 3}%
+${color yellow}${top name 4}${alignr}${top cpu 4}%
+${color yellow}${top name 5}${alignr}${top cpu 5}%
+
 ]]

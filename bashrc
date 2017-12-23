@@ -14,3 +14,5 @@ source /usr/local/bin/virtualenvwrapper.sh
 #else
 #    workon datascience3
 #fi
+
+export EDITOR=vim
