@@ -58,6 +58,7 @@ Bundle 'tpope/vim-obsession'
 Bundle 'ap/vim-css-color'
 Bundle 'kien/ctrlp.vim'
 Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'scrooloose/nerdtree'
 Bundle 'mattn/emmet-vim'
 Bundle 'davidhalter/jedi-vim'
 

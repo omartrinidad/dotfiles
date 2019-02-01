@@ -43,13 +43,3 @@ ln -sf ~/dotfiles/conkyrc ~/.conkyrc
 ln -sf ~/dotfiles/tmux.conf ~/.tmux.conf
 git clone https://github.com/tmux-plugins/tmux-resurrect ~/.tmux/tmux-resurrect
 tmux source-file ~/.tmux.conf
-
-# ---------------------------- [ vim for jupyter ] -----------------------------
-
-# create required directory in case (optional)
-mkdir -p $(jupyter --data-dir)/nbextensions
-# clone the repository
-cd $(jupyter --data-dir)/nbextensions
-git clone https://github.com/lambdalisue/jupyter-vim-binding vim_binding
-# activate the extension
-jupyter nbextension enable vim_binding/vim_binding
