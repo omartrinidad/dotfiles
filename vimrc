@@ -17,16 +17,25 @@ set nowrap
 set foldmethod=indent
 set foldlevel=99
 
-"theme molokai, zenburn
-set t_Co=256
-"colorscheme molokai
-colorscheme zenburn
+" column and cursorline
+set colorcolumn=80
+set cursorline
 
-"theme solarized
-"set t_Co=16
-"set background=light
-"let g:solarized_termcolors=16
-"colorscheme solarized
+"theme: zenburn, solarized, molokai, PaperColor
+set t_Co=256
+colorscheme molokai
+
+if g:colors_name == "solarized"
+    set t_Co=16
+    set background=dark
+    let g:solarized_termcolors=16
+elseif g:colors_name == "molokai"
+    hi ColorColumn ctermbg=235
+    hi CursorLine ctermbg=235
+endif
+
+hi OverLength ctermfg=111
+match OverLength /\%81v.\+/
 
 "change split
 map <c-j> <c-w>j
@@ -78,14 +87,6 @@ let g:airline_symbols.linenr = '␤'
 let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.whitespace = 'Ξ'
 
-
-" ColorColumn
-set colorcolumn=80
-"hi ColorColumn ctermbg=235 "molokai
-"hi ColorColumn ctermbg=187 "solarized light
-hi OverLength ctermfg=111
-match OverLength /\%81v.\+/
-
 " In order to justify text
 " set textwidth=80
 
@@ -95,10 +96,6 @@ au BufRead,BufNewFile *.md set filetype=markdown
 " open a new vertical split window in the right side
 set splitright
 
-" horizontal line
-set cursorline
-"hi CursorLine ctermbg=235 "molokai
-"hi CursorLine ctermbg=187 "solarized light
 
 " Bye key directions in normal, insert and visual mode
 nnoremap <up> <nop>
