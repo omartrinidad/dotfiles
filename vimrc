@@ -29,9 +29,6 @@ if g:colors_name == "solarized"
     set t_Co=16
     set background=dark
     let g:solarized_termcolors=16
-elseif g:colors_name == "molokai"
-    hi ColorColumn ctermbg=235
-    hi CursorLine ctermbg=235
 endif
 
 hi OverLength ctermfg=111

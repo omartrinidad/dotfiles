@@ -134,7 +134,7 @@ if &t_Co > 255
       hi CursorLine               ctermbg=235   cterm=none
    else
       hi Normal       ctermfg=252 ctermbg=234 "none if you want transparency
-      hi CursorLine               ctermbg=234   cterm=none
+      hi CursorLine               ctermbg=235   cterm=none
    endif
    hi Boolean         ctermfg=135
    hi Character       ctermfg=144
@@ -213,7 +213,7 @@ if &t_Co > 255
 
    hi Comment         ctermfg=59
    hi CursorColumn                ctermbg=234
-   hi ColorColumn                 ctermbg=234
+   hi ColorColumn                 ctermbg=235
    hi LineNr          ctermfg=250 ctermbg=234
    hi NonText         ctermfg=59
    hi SpecialKey      ctermfg=59
