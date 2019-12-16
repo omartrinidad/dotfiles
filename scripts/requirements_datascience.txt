@@ -91,7 +91,7 @@ SQLAlchemy==1.1.14
 statsmodels==0.8.0
 tables==3.4.4
 tensorboard==1.11.0
-tensorflow==1.2.1
+tensorflow==1.15.0
 tensorflow-gpu==1.11.0
 termcolor==1.1.0
 terminado==0.8.1
