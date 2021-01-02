@@ -1,6 +1,6 @@
 
 # ----------------------------------- [ vim ] ----------------------------------
-# Warning: At the end open Vim and run :PluginInstall
+# At the end open Vim and run :PluginInstall
 
 mkdir ~/.vim/
 ln -sf ~/dotfiles/vim/* ~/.vim/
@@ -12,31 +12,13 @@ git clone https://github.com/powerline/fonts ~/.fonts
 
 # Powerline fonts
 cd ~/.fonts
-./install
+    ./install
 cd -
-
-# ---------------------------------- [ virtual envs ] --------------------------
-
-mkdir ~/.envs
-echo '' >> ~/.bashrc
-echo '# virtualenvwrapper' >> ~/.bashrc
-echo 'export WORKON_HOME=~/.envs' >> ~/.bashrc
-echo 'source /usr/local/bin/virtualenvwrapper.sh' >> ~/.bashrc
-source ~/.bashrc
-
-# ---------------------------- [ mkdir virtual envs ] --------------------------
-
-mkvirtualenv --python=/usr/bin/python3 tres
 
 # ---------------------------------- [ bash ] ----------------------------------
 
 cat ~/dotfiles/bashrc >> ~/.bashrc
 source ~/.bashrc
-
-# ---------------------------------- [ conky ] ---------------------------------
-
-touch ~/things.md
-ln -sf ~/dotfiles/conkyrc ~/.conkyrc
 
 # ----------------------------------- [ tmux ] ---------------------------------
 
