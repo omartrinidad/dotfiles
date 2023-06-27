@@ -27,7 +27,7 @@ mkvenv() {
     then
       echo "Please provide venv name"
     else
-      python3 -m venv $VENV_HOME/$1
+      python3.10 -m venv $VENV_HOME/$1
   fi
 }
 
