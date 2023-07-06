@@ -11,6 +11,7 @@ Here I save my configurations for Vim, Bash, Tmux and JupyterLab. See
     - `python3 -m venv /home/user/.venvs/jupyter`
     - `pip install jupyter jupyterlab`
     - `jupyter notebook --generate-config`
+	- `jupyter notebook --notebook-dir=/home/user/notebook_dir`
     - `jupyter notebook password`
 
 + Create the cron:
